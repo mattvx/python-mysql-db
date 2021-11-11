@@ -16,10 +16,7 @@ First ensure you have installed:
 
 _  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=docker -d mysql:latest_
 
-**2: With docker ps now you should see it running:**
-
-  CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS       PORTS                                                  NAMES
-  e9ac7b8b6efc   mysql:latest   "docker-entrypoint.s…"   3 hours ago   Up 3 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   mysql
+**2: With docker ps now you should see it running.**
 
 **3: You should now be able to connect to it via command line:**
 
