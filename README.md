@@ -14,7 +14,7 @@ First ensure you have installed:
   
 **1: Deploying the test database is as simple as writin this one-liner:**
 
-_  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=docker -d mysql:latest_
+   _docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=docker -d mysql:latest_
 
 **2: With docker ps now you should see it running.**
 
