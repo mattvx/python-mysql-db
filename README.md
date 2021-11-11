@@ -6,11 +6,11 @@ Tested on :
 
 First ensure you have installed:
   
-  _-docker
+  -docker
   
   -mysql
   
-  -python module pymysql_
+  -python module pymysql
   
 **1: Deploying the test database is as simple as writin this one-liner:**
 
@@ -25,14 +25,14 @@ First ensure you have installed:
 **4: You can now create a new database with a test table. i created a database namd "test" with a table in it called "animali" wich contains some random
 animal names along with their birthdate, sex and owner info. I later added a primary key to unique identify each record:**
 
-  _mysql> CREATE DATABASE test;
+  mysql> CREATE DATABASE test;
   
   mysql> USE test
   
   mysql> CREATE TABLE animali (nome VARCHAR(20), proprietario VARCHAR(30),
        specie VARCHAR(20), sesso CHAR(1), nascita DATE);
        
-  mysql> ALTER TABLE animali ADD identificativo INT AUTO_INCREMENT PRIMARY KEY;_
+  mysql> ALTER TABLE animali ADD identificativo INT AUTO_INCREMENT PRIMARY KEY;
   
 **5: Now we can drop in the table some data to start practicing queries:**
 
