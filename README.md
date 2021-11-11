@@ -7,7 +7,9 @@ Tested on :
 First ensure you have installed:
   
   _-docker
+  
   -mysql
+  
   -python module pymysql_
   
 **1: Deploying the test database is as simple as writin this one-liner:**
