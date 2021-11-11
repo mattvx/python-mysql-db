@@ -10,33 +10,37 @@ First ensure you have installed:
   -mysql
   -python module pymysql_
   
-1: Deploying the test database is as simple as writin this one-liner:
-_  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=docker -d mysql:latest
-_
-2: With **docker ps** now you should see it running:
+**1: Deploying the test database is as simple as writin this one-liner:**
+
+_  docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=docker -d mysql:latest_
+
+**2: With docker ps now you should see it running:**
 
   CONTAINER ID   IMAGE          COMMAND                  CREATED       STATUS       PORTS                                                  NAMES
   e9ac7b8b6efc   mysql:latest   "docker-entrypoint.s…"   3 hours ago   Up 3 hours   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   mysql
 
-3: You should now be able to connect to it via command line:
+**3: You should now be able to connect to it via command line:**
 
 *$ mysql -h 127.0.0.1 -u root --password=docker -P 3306*
 
-4: You can now create a new database with a test table. i created a database namd "test" with a table in it called "animali" wich contains some random
-animal names along with their birthdate, sex and owner info. I later added a primary key to unique identify each record:
+**4: You can now create a new database with a test table. i created a database namd "test" with a table in it called "animali" wich contains some random
+animal names along with their birthdate, sex and owner info. I later added a primary key to unique identify each record:**
 
   _mysql> CREATE DATABASE test;
+  
   mysql> USE test
+  
   mysql> CREATE TABLE animali (nome VARCHAR(20), proprietario VARCHAR(30),
        specie VARCHAR(20), sesso CHAR(1), nascita DATE);
+       
   mysql> ALTER TABLE animali ADD identificativo INT AUTO_INCREMENT PRIMARY KEY;_
   
-5: Now we can drop in the table some data to start practicing queries:
-    
+**5: Now we can drop in the table some data to start practicing queries:**
+
   _mysql> INSERT INTO animali VALUES ('animal_name','owner_name','species_name','M or F','date ad YYYY-MM-DD');_
   
-6: Ok, we can now leave the database:
+**6: Ok, we can now leave the database:**
 
-  _mysql> exit_
+_mysql> exit_
   
-7: We can now run our python script to execute queries. YaY!
+**7: We can now run our python script to execute queries. YaY!**
